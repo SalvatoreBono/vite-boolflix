@@ -1,14 +1,68 @@
 <script>
+import { store } from "../store";
 export default {
   components: {},
   data() {
-    return {};
+    return {
+      store,
+    };
   },
   methods: {},
   mounted() {},
 };
 </script>
 
-<template></template>
+<template>
+  <div class="d-flex flex-wrap gap-5 container pt-3">
+    <div v-for="singleMovies in store.movie" class="col">
+      <div class="card" style="width: 18rem">
+        <img
+          :src="`http://image.tmdb.org/t/p/w500/${singleMovies.poster_path}`"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body overlay text-center">
+          <div class="card-title text-center">
+            <h4 class="pb-3">
+              <span class="fw-bold">Titolo:</span> {{ singleMovies.title }}
+            </h4>
+            <div class="pb-3">
+              <span class="fw-bold">Titolo originale: </span>
+              {{ singleMovies.original_title }}
+            </div>
+          </div>
+          <div class="card-text">
+            <div class="pb-3">
+              <span class="fw-bold">Lingua Originale: </span>
+              {{ singleMovies.original_language }}
+            </div>
+            <div>
+              <span class="fw-bold">Voto: </span>
+              {{ singleMovies.vote_average }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.card {
+  height: 100%;
+}
+.overlay {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+.card:hover .overlay {
+  opacity: 1;
+  color: white;
+}
+</style>

@@ -3,7 +3,7 @@ import { reactive } from "vue";
 
 export const store = reactive({
     userTextFilm: "",
-    title: "",
+    movie: {},
 })
 
 export function searchFilm() {
@@ -15,6 +15,6 @@ export function searchFilm() {
         }
     })
         .then((response) => {
-            store.title = response.data.results.original_title;
+            store.movie = response.data.results;
         })
 }
