@@ -1,7 +1,10 @@
 <script>
+import CountryFlag from "vue-country-flag-next";
 import { store } from "../store";
 export default {
-  components: {},
+  components: {
+    CountryFlag,
+  },
   data() {
     return {
       store,
@@ -33,10 +36,17 @@ export default {
           </div>
           <div class="card-text">
             <div class="pb-3">
-              <span class="fw-bold">Lingua Originale: </span>
-              <img
-                :src="`https://flagsapi.com/${singleMovies.original_language.toUpperCase()}/flat/64.png`"
-              />
+              <div
+                class="align-items-center d-flex justify-content-center align-items-center"
+              >
+                <div class="fw-bold me-1">Lingua Originale:</div>
+                <div>
+                  <country-flag
+                    :country="singleMovies.original_language"
+                    size="normal"
+                  />
+                </div>
+              </div>
             </div>
             <div>
               <span class="fw-bold">Voto: </span>
