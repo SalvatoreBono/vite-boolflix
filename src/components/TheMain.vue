@@ -1,6 +1,6 @@
 <script>
 import CountryFlag from "vue-country-flag-next";
-import { store } from "../store";
+import { reviewFilm, store } from "../store";
 export default {
   components: {
     CountryFlag,
@@ -10,13 +10,15 @@ export default {
       store,
     };
   },
-  methods: {},
+  methods: {
+    reviewFilm,
+  },
   mounted() {},
 };
 </script>
 
 <template>
-  <div class="d-flex flex-wrap gap-5 container pt-3">
+  <div style="padding-top: 120px" class="d-flex flex-wrap gap-5 container pb-3">
     <div v-for="singleMovies in store.movie" class="col">
       <div class="card" style="width: 18rem">
         <img
@@ -50,7 +52,7 @@ export default {
             </div>
             <div>
               <span class="fw-bold">Voto: </span>
-              {{ singleMovies.vote_average }}
+              {{ reviewFilm(parseFloat(singleMovies.vote_average)) }}
             </div>
           </div>
         </div>

@@ -15,12 +15,16 @@ export default {
 </script>
 
 <template>
-  <div class="bg-black">
+  <div class="bg-black fixed">
     <div
-      class="container d-flex align-items-center justify-content-between pt-3"
+      class="container d-flex align-items-center justify-content-between pt-3 pb-3"
     >
       <div>
-        <h1 style="color: red">BOOLFLIX</h1>
+        <img
+          class="logo"
+          src="../assets/img/504e88f1a30f968e13f4cdd854aab685.png"
+          alt=""
+        />
       </div>
       <div class="d-flex">
         <input
@@ -44,7 +48,16 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.logo {
+  width: 75%;
+}
 .form-control:focus {
   box-shadow: 0 0 0 0.25rem rgba(255, 0, 0, 0.5);
+}
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 </style>

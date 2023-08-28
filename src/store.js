@@ -18,3 +18,11 @@ export function searchFilm() {
             store.movie = response.data.results;
         })
 }
+
+/* come argomento mi do il numero delle recesioni totali */
+export function reviewFilm(x) {
+    let review = x.toFixed();
+    const result = review / 2;
+    return result;
+
+}
