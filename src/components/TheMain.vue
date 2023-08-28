@@ -34,7 +34,9 @@ export default {
           <div class="card-text">
             <div class="pb-3">
               <span class="fw-bold">Lingua Originale: </span>
-              {{ singleMovies.original_language }}
+              <img
+                :src="`https://flagsapi.com/${singleMovies.original_language.toUpperCase()}/flat/64.png`"
+              />
             </div>
             <div>
               <span class="fw-bold">Voto: </span>
