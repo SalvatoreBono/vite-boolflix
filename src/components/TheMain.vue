@@ -1,9 +1,9 @@
 <script>
-import CountryFlag from "vue-country-flag-next";
+import LangFlag from "vue-lang-code-flags";
 import { reviewFilm, store } from "../store";
 export default {
   components: {
-    CountryFlag,
+    LangFlag,
   },
   data() {
     return {
@@ -43,10 +43,7 @@ export default {
               >
                 <div class="fw-bold me-1">Lingua Originale:</div>
                 <div>
-                  <country-flag
-                    :country="singleMovies.original_language"
-                    size="normal"
-                  />
+                  <lang-flag :iso="singleMovies.original_language" />
                 </div>
               </div>
             </div>

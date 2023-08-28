@@ -19,7 +19,7 @@ export function searchFilm() {
         })
 }
 
-/* come argomento mi do il numero delle recesioni totali */
+/* come argomento do il numero delle recesioni totali */
 export function reviewFilm(x) {
     let review = x.toFixed();
     const result = review / 2;

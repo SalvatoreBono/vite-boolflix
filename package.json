@@ -11,7 +11,8 @@
   "dependencies": {
     "flag": "^5.0.1",
     "vue": "^3.3.4",
-    "vue-country-flag-next": "^2.3.2"
+    "vue-country-flag-next": "^2.3.2",
+    "vue-lang-code-flags": "^1.0.13"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.4.2",
