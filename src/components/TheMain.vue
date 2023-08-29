@@ -48,8 +48,12 @@ export default {
               </div>
             </div>
             <div>
-              <span class="fw-bold">Voto: </span>
-              {{ reviewFilm(parseFloat(singleMovies.vote_average)) }}
+              <div class="stars-outer">
+                <div
+                  :style="`${reviewFilm(singleMovies.vote_average)}`"
+                  class="stars-inner"
+                ></div>
+              </div>
             </div>
           </div>
         </div>
@@ -75,5 +79,36 @@ export default {
 .card:hover .overlay {
   opacity: 1;
   color: white;
+}
+.stars-outer {
+  display: inline-block;
+
+  position: relative;
+
+  font-family: FontAwesome;
+}
+
+.stars-outer::before {
+  content: "\f006 \f006 \f006 \f006 \f006";
+}
+
+.stars-inner {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  width: 0;
+}
+
+.stars-inner::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+
+  color: #f8ce0b;
 }
 </style>

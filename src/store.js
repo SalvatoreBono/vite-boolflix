@@ -21,8 +21,14 @@ export function searchFilm() {
 
 /* come argomento do il numero delle recesioni totali */
 export function reviewFilm(x) {
-    let review = x.toFixed();
-    const result = review / 2;
-    return result;
+    let review = parseFloat(x)
+    const resultReview = review / 2;
+
+    /* Totale Stelle */
+    const starTotal = 5;
+    /* il risultato delle recensioni / il totale delle stelle * 100 (così da renderlo un numero in percentuale) */
+    const starPercentage = `width:${(resultReview / starTotal) * 100}%`;
+
+    return starPercentage
 
 }
