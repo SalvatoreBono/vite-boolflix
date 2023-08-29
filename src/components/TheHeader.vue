@@ -28,10 +28,11 @@ export default {
       </div>
       <div class="d-flex">
         <input
+          @keyup.enter="searchFilm()"
           type="text"
           class="form-control"
           id="formGroupExampleInput"
-          placeholder="Cerca film"
+          placeholder="Cerca film o serie TV"
           v-model="store.userTextFilm"
         />
         <button
@@ -53,6 +54,7 @@ export default {
 }
 .form-control:focus {
   box-shadow: 0 0 0 0.25rem rgba(255, 0, 0, 0.5);
+  border-color: rgb(255, 255, 255);
 }
 
 .fixed {
