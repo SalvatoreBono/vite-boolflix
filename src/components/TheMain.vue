@@ -30,10 +30,12 @@ export default {
           <div class="card-title text-center">
             <h4 class="pb-3">
               <span class="fw-bold">Titolo:</span> {{ singleMovies.title }}
+              {{ singleMovies.name }}
             </h4>
             <div class="pb-3">
               <span class="fw-bold">Titolo originale: </span>
               {{ singleMovies.original_title }}
+              {{ singleMovies.original_name }}
             </div>
           </div>
           <div class="card-text">

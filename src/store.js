@@ -7,7 +7,7 @@ export const store = reactive({
 })
 
 export function searchFilm() {
-    const url = "https://api.themoviedb.org/3/search/movie";
+    const url = "https://api.themoviedb.org/3/search/multi";
     axios.get(url, {
         params: {
             api_key: `e18bd326b1f37c5ea1e097b2f4c62927`,
