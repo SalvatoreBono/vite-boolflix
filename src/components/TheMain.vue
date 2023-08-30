@@ -25,7 +25,12 @@ export default {
 </script>
 
 <template>
-  <div style="padding-top: 120px" class="d-flex flex-wrap gap-5 container pb-3">
+  <!-- se homeUser è uguale a false viene sbloccato -->
+  <div
+    v-if="store.homeUser === false"
+    style="padding-top: 120px"
+    class="d-flex flex-wrap gap-5 container pb-3"
+  >
     <div v-for="singleMovies in store.movie" class="col">
       <div class="card" style="width: 18rem">
         <img

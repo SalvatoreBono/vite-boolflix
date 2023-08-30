@@ -4,6 +4,7 @@ import { reactive } from "vue";
 export const store = reactive({
     userTextFilm: "",
     movie: {},
+    homeUser: true,
 })
 
 /* argomento i singoli url */
@@ -42,3 +43,6 @@ export function reviewFilm(x) {
     return starPercentage
 
 }
+
+
+
