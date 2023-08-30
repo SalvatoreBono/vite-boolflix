@@ -44,9 +44,6 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  z-index: 2;
-  width: 100%;
 }
 .user {
   margin-top: 50px;
