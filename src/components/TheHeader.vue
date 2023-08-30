@@ -4,6 +4,7 @@ export default {
   components: {},
   data() {
     return {
+      url: [`https://api.themoviedb.org/3/search/multi`],
       store,
     };
   },
@@ -28,7 +29,7 @@ export default {
       </div>
       <div class="d-flex">
         <input
-          @keyup.enter="searchFilm(`https://api.themoviedb.org/3/search/multi`)"
+          @keyup.enter="searchFilm(url)"
           type="text"
           class="form-control"
           id="formGroupExampleInput"
@@ -36,7 +37,7 @@ export default {
           v-model="store.userTextFilm"
         />
         <button
-          @click="searchFilm(`https://api.themoviedb.org/3/search/multi`)"
+          @click="searchFilm(url)"
           type="button"
           style="background-color: red"
           class="btn btn-danger ms-3"

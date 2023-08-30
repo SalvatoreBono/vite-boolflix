@@ -7,6 +7,10 @@ export default {
   },
   data() {
     return {
+      urls: [
+        `https://api.themoviedb.org/3/discover/movie`,
+        `https://api.themoviedb.org/3/discover/tv`,
+      ],
       store,
     };
   },
@@ -15,7 +19,7 @@ export default {
     searchFilm,
   },
   mounted() {
-    searchFilm(`https://api.themoviedb.org/3/discover/movie`);
+    searchFilm(this.urls);
   },
 };
 </script>
