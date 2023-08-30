@@ -1,6 +1,6 @@
 <script>
 import LangFlag from "vue-lang-code-flags";
-import { reviewFilm, store } from "../store";
+import { reviewFilm, searchFilm, store } from "../store";
 export default {
   components: {
     LangFlag,
@@ -12,8 +12,11 @@ export default {
   },
   methods: {
     reviewFilm,
+    searchFilm,
   },
-  mounted() {},
+  mounted() {
+    searchFilm(`https://api.themoviedb.org/3/discover/movie`);
+  },
 };
 </script>
 

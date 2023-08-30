@@ -28,7 +28,7 @@ export default {
       </div>
       <div class="d-flex">
         <input
-          @keyup.enter="searchFilm()"
+          @keyup.enter="searchFilm(`https://api.themoviedb.org/3/search/multi`)"
           type="text"
           class="form-control"
           id="formGroupExampleInput"
@@ -36,7 +36,7 @@ export default {
           v-model="store.userTextFilm"
         />
         <button
-          @click="searchFilm()"
+          @click="searchFilm(`https://api.themoviedb.org/3/search/multi`)"
           type="button"
           style="background-color: red"
           class="btn btn-danger ms-3"
